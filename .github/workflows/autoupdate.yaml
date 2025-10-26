@@ -4,7 +4,7 @@ permissions:
 
 on:
   push:
-    branches: [dev]
+    branches: [${{ github.event.repository.default_branch }}]
 
 jobs:
   autoupdate:
@@ -27,7 +27,7 @@ jobs:
       - uses: peter-evans/rebase@v3
         with:
           token: ${{ secrets.PAT }}
-          base: dev
+          base: ${{ github.event.repository.default_branch }}
           include-labels: |
             autoupdate-rebase
           exclude-labels: |

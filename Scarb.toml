@@ -11,13 +11,13 @@ edition = "2024_07"
 license-file = "LICENSE"
 
 [workspace.dependencies]
-starknet = "2.11.4"
-snforge_std = "0.45.0"
-assert_macros = "2.11.4"
+starknet = "2.12.2"
+snforge_std = "0.49.0"
+assert_macros = "2.12.2"
 openzeppelin = "2.0.0"
 openzeppelin_testing = "4.2.0"
-starkware_utils = { git ="https://github.com/starkware-libs/starkware-starknet-utils", rev="e716f3538e5edfefe441e3a8c207710460e3d511" }
-starkware_utils_testing = { git="https://github.com/starkware-libs/starkware-starknet-utils", rev="e716f3538e5edfefe441e3a8c207710460e3d511" }
+starkware_utils = { git ="https://github.com/starkware-libs/starkware-starknet-utils", rev="e11de236fe1e36c9556690749f834b6d0e1c4d49" }
+starkware_utils_testing = { git="https://github.com/starkware-libs/starkware-starknet-utils", rev="e11de236fe1e36c9556690749f834b6d0e1c4d49" }
 
 [workspace.tool.fmt]
 sort-module-level-items = true

@@ -33,8 +33,8 @@ In this repo run
 ```bash
 git clone https://github.com/starkware-libs/template-cairo-repo.git
 cd template-cairo-repo
-git log --oneline
-git format-patch -1 <commit_hash>
+git fetch origin
+git format-patch 40b4468^..HEAD
 ```
 This will create a file like 0001-Your-commit-message.patch.
 
@@ -43,7 +43,7 @@ In the new repo run
 git clone https://github.com/username/new-repo.git
 cd new-repo
 git am ../template-cairo-repo/0001-Your-commit-message.patch
-git push origin dev
+git push origin <branch-name>
 ```
 
 Make sure to edit Scarb.toml to define workspace in this repo.

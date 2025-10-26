@@ -18,13 +18,13 @@ concurrency:
 
 jobs:
   cairo_tests:
-    runs-on: starkware-ubuntu-24.04-small
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Install Starknet Foundry
-      - uses: foundry-rs/setup-snfoundry@v3
+        uses: foundry-rs/setup-snfoundry@v3
         with:
           starknet-foundry-version: "0.45.0"
 
@@ -44,7 +44,7 @@ jobs:
         run: scarb test -w --coverage
 
       - name: Upload coverage to Codecov
-      - uses: codecov/codecov-action@v5
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           fail_ci_if_error: true
@@ -52,7 +52,7 @@ jobs:
 
 
   python_tests:
-    runs-on: starkware-ubuntu-24.04-large	
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
